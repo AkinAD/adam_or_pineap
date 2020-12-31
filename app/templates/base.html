@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - AdamPineap</title>
+        {% else %}
+        <title>Adam or Pineapple?</title>
+        {% endif %}
+        <link rel="icon" 
+	type="image/png" 
+	href="https://vignette.wikia.nocookie.net/austinally/images/b/bb/Kawaii_pineapple.png">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='stylesheets/style.css') }}">
+
+    </head>
+    <body>
+        <h1>I stole this template, i can frontend but i am lazy so  FUCK THAT</h1>
+    <div class="info"><a href="https://www.grandvincent-marion.fr" target="_blank"><p> Credits to <i class="fa fa-heart"></i> by Marion Grandvincent </p></a>
+    <p>Take my survey for shits <a href="https://www.surveymonkey.com/r/98LY56W"  target="_blank" style="color: blue; cursor: pointer;">CLICK HERE </a></p></div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <span style="color: red;">{{ message }} with <i class="fa fa-heart"></i> from Kinny </span>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    </body>
+</html>

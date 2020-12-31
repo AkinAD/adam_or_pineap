@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content">
+	<div class="container">
+		<img class="bg-img" src="https://lh3.googleusercontent.com/pw/ACtC-3f_4FyVkLo48GmcMD-fHVmEF6bEGlGteTpg-4WhyNUWlSQVPbuDI_Pl4R2tQUptfYstCTigV90qq6JJL8ohlMX0KzEjFHVX08E3p1B5rlcMTTrK2-Xsr9yTn6McFd5v05tGK5PVFKBbxJJTtf7TT6RH=w1224-h1843-no?authuser=0" alt="" width="100%">
+		<div class="menu">
+			<a href="#connexion" class="btn-connexion"><h2>From the bored mind of Kinny</h2></a>
+			<!--				<a href="#enregistrer" class="btn-enregistrer active"><h2>SIGN UP</h2></a>-->
+			<!--                https://flask-wtf.readthedocs.io/en/stable/form.html-->
+		</div>
+		<div class="connexion">
+			<div class="contact-form">
+				<p>Find out, is it Adam or is it a pineapple?</p>
+				<form action="" method="post" novalidate enctype="multipart/form-data">
+					{{ form.hidden_tag() }}
+					{{ form.csrf_token }}
+					{{ form.url.label }}  {% for error in form.url.errors %} <span style="color: red;">[{{ error }}]</span>{% endfor %}
+					{{ form.url(placeholder="https:/example.com/pineapple-main.jpg") }}
+					<!-- {{ form.url}} -->
+					<!-- <input type="url" name="url" id="url"
+						placeholder="https://example.com"
+						pattern="https://.*"
+						required> -->
+						
+						<label>Or upload your image directly!</label>
+						<label for="upload" class="custom-file-upload">
+							<i class="fa fa-cloud-upload"></i> Custom Upload
+						</label>
+						{{form.upload}}	{% for error in form.upload.errors %} <span style="color: red;">[{{ error }}]</span>{% endfor %}				
+						<!-- <input type="file"
+							id="file-upload" name="image" 
+							accept="image/png, image/jpeg"> -->
+							<a href="https://www.surveymonkey.com/r/98LY56W" target="_blank">
+								<div class="check">
+									<label>				
+										<input id="check" type="checkbox" class="checkbox"  href="https://www.surveymonkey.com/r/98LY56W" target="_blank">
+										<svg xmlns="http://www.w3.org/2000/svg" width="26px" height="23px">
+											<path class="path-back"  d="M1.5,6.021V2.451C1.5,2.009,1.646,1.5,2.3,1.5h18.4c0.442,0,0.8,0.358,0.8,0.801v18.398c0,0.442-0.357,0.801-0.8,0.801H2.3c-0.442,0-0.8-0.358-0.8-0.801V6"/>
+											<path class="path-moving" d="M24.192,3.813L11.818,16.188L1.5,6.021V2.451C1.5,2.009,1.646,1.5,2.3,1.5h18.4c0.442,0,0.8,0.358,0.8,0.801v18.398c0,0.442-0.357,0.801-0.8,0.801H2.3c-0.442,0-0.8-0.358-0.8-0.801V6"/>
+										</svg>
+									</label>
+									<h3>Akin is the coolest guy I ever met</h3>
+								</div>
+							</a>
+							<input class="submit" value="Submit to lord Kinny" type="submit">
+						</form>
+						
+				</div>
+				
+					<hr>
+					<a href="http://ade-ak.in/" target="_blank"><h4>Some link to Somewhere</h4></a>
+					<h5> |<a target="_blank" href="https://github.com/akinad"style="cursor: pointer; ">My github!!!</a></h5>
+				</div>
+
+			</div>
+			{% if output or filename%}
+			<br>
+			<div class="resultContainer">
+				<img src="{{ url_for('display_image', filename=filename) }}" alt="User Uploaded Image" class="resultimg" >
+				<div class="textOverlay">
+					<div class="resval">{{output}}</div>		
+				</div>
+			</div>
+			{% endif %}
+		</div>
+		<script>(function(t,e,s,o){var n,c,l;t.SMCX=t.SMCX||[],e.getElementById(o)||(n=e.getElementsByTagName(s),c=n[n.length-1],l=e.createElement(s),l.type="text/javascript",l.async=!0,l.id=o,l.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd5BlO0ssoKsammUFV9MjnpYqAuo_2BP8N9LEjCISVRjrEk.js"].join(""),c.parentNode.insertBefore(l,c))})(window,document,"script","smcx-sdk");</script>
+		<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script> -->
+{% endblock %}

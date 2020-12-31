@@ -1,0 +1,271 @@
+body {
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 500;
+  color:#fff
+}
+.info p {
+  text-align:center;
+  color: #999;
+  text-transform:none;
+  font-weight:600;
+  font-size:15px;
+  margin-top:2px
+}
+
+.info i {
+  color:#55acee;
+}
+
+h1 {
+  text-align:center; 
+  color: #666;
+  text-shadow: 1px 1px 0px #FFF;
+  margin:50px 0px 0px 0px
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: inherit;
+}
+
+hr {
+  position: relative;
+  margin-top: 27%;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  opacity: 0.15;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+/*    bottom: 0;*/
+  left: 0;
+  width: 100%;
+  min-height: 10rem;
+  background: #f2f2f2;
+  z-index:-1;
+}
+
+.container {
+  display: block;
+  position: relative;
+  width: 530px;
+/*    min-height: 790px;*/
+  min-height: 45rem;  
+  margin: auto;
+  margin-top: 180px; 
+  box-shadow: 1px 5px 10px 1px #333;
+  overflow:hidden;
+}
+
+img.bg-img {
+  display: block;
+  position: absolute;
+  margin: auto;
+}
+
+.menu {
+  position: relative;
+  padding: 15% 13% 0 13%;
+}
+
+.menu h2 {
+  display: inline;
+  margin: 20px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid #1161ee;
+}
+a:not(.active) {
+  cursor:inherit;
+}
+.menu .active h2 {
+  border-bottom: 0 solid #1161ee;
+  color: #AEAEAE;
+  transition: color 0.5s ease-in;
+}
+
+.connexion {
+    position: absolute;
+    padding: 15% 13%;
+    width: 74%;
+    left:0px;
+    transition: all 0.7s;
+}
+
+.connexion h2 {
+    display: inline;
+    margin: 20px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #1161ee;
+}
+
+.connexion h4 {
+    margin-bottom: 0;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.3;
+}
+
+.connexion h4:hover {
+    opacity: 0.8;
+    transition: all 0.1s ease-in;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+input {
+    display: block;
+    width: 93%;
+    margin: auto;
+    padding: 13px;
+    border: 0;
+    border-radius: 20px;
+    font-family: "Roboto",sans-serif;
+    opacity: 0.5;
+}
+
+input[type="url"] {
+  color: white;
+  font-weight: bold;
+  background: black;
+
+}
+
+input p {
+    color: #fff;
+    opacity: 1;
+}
+
+input.submit {
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    opacity: 1;
+    background-color: #1161EE;
+    cursor: pointer;
+}
+
+.check label {
+    float: left;
+    width: 10%;
+    margin-left: 5%;
+}
+
+.check h3 {
+    padding: 15px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked + svg .path-moving {
+    -webkit-transition: stroke .4s,stroke-dasharray .4s,stroke-dashoffset .4s cubic-bezier(.3,.8,.6,1.5);
+    transition: stroke .4s,stroke-dasharray .4s,stroke-dashoffset .4s cubic-bezier(.3,.8,.6,1.5);
+    stroke-dasharray: 25 90;
+    stroke-dashoffset: 0;
+}
+
+.path-moving,
+.path-back {
+    fill: none;
+    stroke: #1161ee;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.path-moving {
+    -webkit-transition: stroke .4s,stroke-dasharray .4s,stroke-dashoffset .4s;
+    transition: stroke .4s,stroke-dasharray .4s,stroke-dashoffset .4s;
+    stroke: #ffffff;
+    stroke-dasharray: 110;
+    stroke-dashoffset: -32;
+}
+.enregistrer {
+    position: absolute;
+    padding: 15% 13%;
+    width: 74%;
+    right:0px;
+    transition: all 0.7s;
+}
+.active-section {
+    position: absolute;
+    right:500px;
+}
+.remove-section {
+    position: absolute;
+    left: 500px;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.resultContainer {
+position: relative;
+text-align: center;
+color: white;
+margin-left: auto;
+margin-right: auto;
+width: 40%;
+}
+
+.resultimg {
+display: block;
+width: 100%;
+height: auto;
+
+}
+
+.resval {
+color: white;
+padding-left: 20px;
+white-space: pre-line;
+}
+
+.textOverlay
+{
+position: absolute; 
+bottom: 0; 
+background: rgb(0, 0, 0);
+background: rgba(0, 0, 0, 0.5); /* Black see-through */
+color: #f1f1f1; 
+width: 100%;
+font-size: 12px;
+padding: 20px;
+padding-left: 0px;
+padding-right: 0px;
+text-align: left;
+}

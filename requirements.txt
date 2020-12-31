@@ -1,0 +1,8 @@
+tensorflow == 1.14.0
+opencv-python
+keras
+imageai
+flask
+flask_wtf
+werkzeug
+requests
